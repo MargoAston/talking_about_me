@@ -1,0 +1,56 @@
+@import url(https://www.fontsquirrel.com/fonts/Miama=); 
+
+body {
+    text-align: center;
+    background-color: #eae5e1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 150px auto;
+    background-color: #b1ae89;    
+}
+
+#logo_link img{
+    border: none;
+    width: 150px;
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    color: #ffffff;
+}
+
+
+#page_on_page {
+    background-color: white;
+    margin: 100px;
+
+}
+
+h1 {
+    color: #1b2d64;
+    font-family: 'Bradley Hand';
+}
+
+img {
+    width: 75%;
+    border: 8px solid #b1ae89;
+    
+}
+
+
+
+
+footer {
+    background-color: #807c54;
+    color: #fff;
+}
