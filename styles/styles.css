@@ -1,39 +1,90 @@
-
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     text-align: center;
     background-color: #eae5e1;
-    margin: 0;
-    padding: 0;
+   
 }
 
 header {
     display: grid;
-    grid-template-columns: 150px auto;
-    background-color: #b1ae89;    
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    background-color: #b1ae89; 
+    width: 100%;
+    box-shadow: 10px 10px 10px #6f7364;
 }
 
 #logo_link img{
-    border: none;
-    width: 150px;
-   
+    height: 5em;
 }
 
 nav {
-    display: flex;
     justify-content: space-around;
-    align-items: center;
+    grid-column: 2/5;
+    display: flex;
+    padding-top: 1.5em;
 }
 
 a {
     color: #ffffff;
+    font-size: 2vw;
 }
 
+main {
+    margin-top: 4%;
+    margin-bottom: 6%;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-auto-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;  
+}
 
-#page_on_page {
+#floating-page {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 10% 20% 15% 20% 5% 5% 10%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #6f7364;
+}
+
+.me {
+    grid-column: 2/8;
+    grid-row: 1/9;
+    height: 120%;
     background-color: white;
-    margin: 100px;
+}
 
+.page-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: .75vw;
+    font-size: 2vw;
+    color: #263f8c;
+}
+
+#me-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.col1 {
+    grid-row: 2/5;
+    margin: 0% 0% 0% 20%;
+}
+
+.col2 {
+    grid-row: 2/4;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1vw;
+    line-height: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
 }
 
 h1 {
@@ -41,16 +92,57 @@ h1 {
     font-family: 'Bradley Hand';
 }
 
-img {
-    width: 75%;
-    border: 8px solid #b1ae89;
-    
+.col2 img {
+    width: 60%;
+    border:10px double #807c54;
+    border-radius: 10px;
 }
 
+.skills {
+    grid-column: 7/10;
+    grid-row: 5/11;
+    padding-top: .6em;
+    margin-top: 7%;
+    background-color: #eae5e1;
+    height: 100%;
+}
 
+.skills h2 {
+    margin-top: 0px;
+    padding-top: 0;
+    grid-column: 1/3;
+    grid-row: 1/2; 
+}
 
+ul {
+    list-style-type:circle;
+    list-style-position: inside;
+    text-align: left;
+    margin-top: 0;
+    padding-top: .5em;
+}
+
+li {
+    font-size: 1.5vw;
+    line-height: 1.5em;
+    color: black;
+}
+
+#list1 {
+    grid-row: 2/6;
+    grid-column: 1/2;
+    padding-left: 1.5em;
+ }
+
+ #list2 {
+    grid-column: 2/3;
+    grid-row: 2/6;
+ }
 
 footer {
-    background-color: #807c54;
+    background-color: #b1ae89;
     color: #fff;
+    height: 15%;
+    padding: 10px;
+    
 }
