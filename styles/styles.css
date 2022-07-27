@@ -27,7 +27,7 @@ nav {
     justify-content: space-around;
     grid-column: 2/5;
     display: flex;
-    padding-top: 1.5em;
+    padding-top: 4%;
 }
 
 a {
