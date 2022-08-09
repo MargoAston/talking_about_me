@@ -48,15 +48,18 @@ body {
 header {
     display: grid;
     grid-template-columns: 1fr 6fr;
+    grid-template-rows: 25% 25% 25% 25%;
     background-color: #b1ae89; 
     width: 100%;
     box-shadow: 10px 10px 10px #6f7364;
+   
 }
+
+
 
 #logo_link img {
     height: 5em;
     margin-top: -.5em;
-    margin-bottom: -.8em;
     display: inline-block;
 }
 
@@ -89,12 +92,8 @@ nav a:hover {
 }
 
 /* This is the main section of the page*/
-main {
-    display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-auto-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%; 
 
-}
+
 
 #floating-container {
     display: grid;
@@ -106,19 +105,20 @@ main {
 
 /* This is the first floating container*/
 .me-container {
-    margin-top: 8%;
-    grid-column: 2/8;
-    grid-row: 1/11;
+    margin-top: 2.5%;
     margin-bottom: 10.5%;
+    margin-left: 10%;
+    margin-right: 20%;
     padding-bottom: 1%;
     background-color: white;
+    border: 1px solid black;
     
 }
 
 .page-title {
     font-family: 'reeyregular','Bradley Hand';
-    padding-top: .75vw;
     color: #263f8c; 
+ 
 }
 
 #me-title {
@@ -156,11 +156,12 @@ main {
 }
 
 .col2 {
-    grid-row: 2/4;
+    grid-row: 1/3;
+    margin-top: 8%;
 }
 
 .col2 img {
-    width: 70%;
+    width: 50%;
     border:10px double #807c54;
     border-radius: 10px;
 
@@ -176,10 +177,11 @@ h3 {
 
 /* This is the second floating container*/
 .skills {
-    grid-column: 7/10;
-    grid-row: 6/10;
-    padding-top: .6em;
-    padding-bottom: .6em;
+    margin-left: 65%;
+    margin-right: 5%;
+    margin-top: -18%;
+    margin-bottom: 1.5%;
+    padding-top: .25vw;
     background-color: #eae5e1;
     border: 1px solid black;
     
@@ -190,6 +192,7 @@ h3 {
     grid-row: 1/2; 
     font-family: 'montserratbold', Arial, sans-serif;
     font-size: 1.75vw;
+    padding-top: .25vw;
     
 }
 
@@ -198,13 +201,13 @@ ul {
     list-style-position: inside;
     text-align: left;
     padding-top: 1vw;
-   padding-bottom: 3em;
+   padding-bottom: 1em;
    
 }
 
 li {
-    font-size: 1.25vw;
-    line-height: 2vw;
+    font-size: 1vw;
+    line-height: 1.7vw;
     margin-right: 1em;
     color: black;
 }
@@ -246,17 +249,35 @@ footer img:hover {
 }
 
 /*This is the style for the experience page*/
-#experience {
-    grid-column: 3/9;
-    grid-row: 2/3;
-   
-    border: 2px solid black;
+h1 {   
+    font-size: 3em;
 }
 
-#experience .child-page {
-    border: 2px solid pink;
+#hero-box h1 {
+    margin-top: -14%;
+    margin-bottom: 14%;
 }
 
-#experience img {
-    margin: 6%;
+#hero-box img {
+    width: 100vw; 
+    position: relative;
+    z-index: -1;
+}
+
+.experience {
+    border:1px solid black;
+    padding-top: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+.experience ul {
+    padding-left: 8em;
+}
+
+.experience h2 {
+    font-size: 2vw;
+}
+
 }
