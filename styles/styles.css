@@ -32,6 +32,29 @@
     font-style: normal;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
 *
 {
     margin: 0;
@@ -51,16 +74,18 @@ header {
     grid-template-rows: 25% 25% 25% 25%;
     background-color: #b1ae89; 
     width: 100%;
+    height: 8%;
     box-shadow: 10px 10px 10px #6f7364;
-   
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
-
-
 #logo_link img {
-    height: 5em;
+    height: 10vw;
     margin-top: -.5em;
     display: inline-block;
+    z-index: 0;
 }
 
 #logo_link img:hover {
@@ -74,15 +99,16 @@ nav {
     display: flex;
     align-items: center;
     height: 4vw;
+   
 }
 
-a {
+nav a {
     color: #ffffff;
-    font-size: 2vw;
+    font-size: 1.5vw;
     height: 2vw;
     text-decoration: none;
     align-items: center;
-    height: 3vw;
+    
 }
 
 nav a:hover {
@@ -92,9 +118,6 @@ nav a:hover {
 }
 
 /* This is the main section of the page*/
-
-
-
 #floating-container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -105,7 +128,7 @@ nav a:hover {
 
 /* This is the first floating container*/
 .me-container {
-    margin-top: 2.5%;
+    margin-top: 8%;
     margin-bottom: 10.5%;
     margin-left: 10%;
     margin-right: 20%;
@@ -224,10 +247,13 @@ li {
     grid-row: 2/7;
  }
 
- /* This is the footer */
+ /* This is the footer. */
 footer {
     background-color: #b1ae89;
-    color: #fff; 
+    color: #111; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -249,35 +275,154 @@ footer img:hover {
 }
 
 /*This is the style for the experience page*/
-h1 {   
+/*This is the hero box.*/
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;  
+    position: fixed;
+    top: 8%;
+    width: 100%;
+   z-index: 888;
+
+}
+
+#hero-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    
+}
+
+#hero-img {
+    width: 100%;
+}
+
+#hero-msg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 0;
+}
+
+#hero-msg h1 {
+    margin-top: 10%;
     font-size: 3em;
 }
 
-#hero-box h1 {
-    margin-top: -14%;
-    margin-bottom: 14%;
+/*This is the sidebar for the timeline*/
+.sidebar {
+    width: 600px;
+    float: right;
+    background-color: #eae5e1;
+    padding-top: 20px;
+    margin-top: 26%;
+    margin-bottom: 3%;
+    margin-right: 2%;
+    
 }
 
-#hero-box img {
-    width: 100vw; 
+/*This is the actual timeline (the vertical ruler)*/
+.timeline {
     position: relative;
-    z-index: -1;
+    max-width: 1200px;
+    margin: 0 auto;
+    
 }
 
-.experience {
-    border:1px solid black;
-    padding-top: 1em;
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 2px;
+    left: 40%;
+    margin-left: -3px;
+    
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 40%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #f6a05e;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Place the container to the left */
+.left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 40%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+ /* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  } 
+
+  /*This is the focus area.*/
+
+ 
+
+  #focus {
+    width: 800px;
+    float: left;
+    background-color: #eae5e1;
+    margin-top: 26%;
     margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 5%;
-}
-
-.experience ul {
-    padding-left: 8em;
-}
-
-.experience h2 {
-    font-size: 2vw;
-}
-
+    border:1px solid black;
+    border-radius: 40px;
+    padding: 20px;
 }
