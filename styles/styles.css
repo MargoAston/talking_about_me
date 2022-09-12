@@ -117,7 +117,7 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* This is the main section of the page*/
+/* This is the main section of the landing page*/
 #floating-container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -184,7 +184,7 @@ nav a:hover {
 }
 
 .col2 img {
-    width: 50%;
+    width: 45%;
     border:10px double #807c54;
     border-radius: 10px;
 
@@ -425,4 +425,17 @@ footer img:hover {
     border:1px solid black;
     border-radius: 40px;
     padding: 20px;
+}
+
+/*This is the style for the projects page*/
+
+#projects img {
+    width: 600px;
+    margin-top: 10%;
+    border:8px solid #b1ae89;
+}
+
+#projects p {
+    width: 525px;
+    margin-left: 34.7%;
 }
