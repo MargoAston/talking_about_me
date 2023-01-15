@@ -8,64 +8,16 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'existencelight';
-    src: url('fonts/existence-light.woff2') format('woff2'),
-         url('fonts/existence-light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'montserratregular';
-    src: url('fonts/montserrat-regular.woff2') format('woff2'),
-         url('fonts/montserrat-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'montserratbold';
-    src: url('fonts/montserrat-bold.woff2') format('woff2'),
-         url('fonts/montserrat-bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: red; 
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
-}
-
-
 *
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     text-align: center;
     background-color: #eae5e1;
-    font-family: 'montserratregular', Arial, sans-serif;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -79,6 +31,18 @@ header {
     position: fixed;
     top: 0;
     z-index: 999;
+}
+
+h1 {
+    color: #263f8c; 
+    text-shadow:  2px 2px white, 4px 4px #b1ae89;
+    font-size: 10vh; 
+    font-weight:300;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 4vh;
 }
 
 #logo_link img {
@@ -99,133 +63,120 @@ nav {
     display: flex;
     align-items: center;
     height: 4vw;
-   
 }
 
 nav a {
     color: #ffffff;
     font-size: 1.5vw;
     height: 2vw;
+    font-weight: 100;
     text-decoration: none;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 nav a:hover {
     background-color: #eae5e1;
     color: #807c54;
     border-radius: 8px;
+    padding: 1vh;
+}
+
+/*This is the hero box.*/
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; 
+    grid-template-rows: 30vh;
+    width: 100%;
+    margin-top: 6vh;
+}
+
+#hero-img {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+}
+
+#hero h1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: center;
+    color: white; 
+    font-weight: 100;
+    text-shadow:  4px 4px #b1ae89;
 }
 
 /* This is the main section of the landing page*/
 #floating-container {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 10% 20% 15% 20% 5% 5% 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh;
     border-radius: 10px;
     box-shadow: 10px 10px 10px #6f7364;
 }
 
 /* This is the first floating container*/
 .me-container {
-    margin-top: 8%;
-    margin-bottom: 10.5%;
-    margin-left: 10%;
-    margin-right: 20%;
-    padding-bottom: 1%;
+    margin: 17vh auto;
+    padding: 3vh;
     background-color: white;
-    border: 1px solid black;
-    
+    width: 60vw;
 }
 
-.page-title {
-    font-family: 'reeyregular','Bradley Hand';
-    color: #263f8c; 
- 
-}
 
-#me-title {
+.me-container h1 {
     grid-column: 1/2;
     grid-row: 1/2;
-    font-size: 3vw;
-    padding-left: 22%;
-    padding-top: 5%;
+    align-self:flex-end;
 }
-
-.col1 {
-    grid-row: 2/5;
-    margin: 15% 0% 0% 20%;
-}
-
-.col1 p {
-    font-size: 1vw;
-    line-height: 1.3em;
-    text-align: justify;
-    padding-bottom: 1.5em;
-}
-
-.col3 {
-    grid-column: 1/3;
-    grid-row: 6/9;
-    margin: 1% 25% 0% 10%;
+.me-container h2 {
+    grid-column: 1/2;
+    grid-row: 2/3; 
     
 }
 
-.col3 p {
-    font-size: 1vw;
-    line-height: 1.3em;
-    margin-bottom: 1em;
-    text-align: justify;
-}
-
-.col2 {
+.me-container img {
+    grid-column: 2/3;
     grid-row: 1/3;
-    margin-top: 8%;
+    margin: auto auto;
+    height: 250px;
+    border-radius: 20px;
 }
 
-.col2 img {
-    width: 45%;
-    border:10px double #807c54;
-    border-radius: 10px;
 
+.me-container p {
+    grid-column: 1/2;
+    padding-left: .5vh;
+    padding-top: 2vh;;
+    font-size: 2.5vh;
 }
-
-h3 {
-    grid-column: 1/3;
-    grid-row: 8/9;
-    margin: 2.5% 25% 0% 10%;
-    font-size: 1vw;
-}
-
 
 /* This is the second floating container*/
 .skills {
     margin-left: 65%;
-    margin-right: 5%;
-    margin-top: -18%;
+    margin-right: 8%;
+    margin-top: -10%;
     margin-bottom: 1.5%;
     padding-top: .25vw;
-    background-color: #eae5e1;
-    border: 1px solid black;
-   
+    background-color: #f9f4f0;
+    height: 33vh;
 }
 
 .skills h2 {
     grid-column: 1/3;
-    grid-row: 1/2; 
-    font-family: 'montserratbold', Arial, sans-serif;
+    grid-row: 1/3; 
     font-size: 1.75vw;
     padding-top: .25vw;
     
 }
 
-ul {
+.skills ul{
     list-style-type:circle;
     list-style-position: inside;
     text-align: left;
-    padding-top: 1vw;
-   padding-bottom: 1em;
-   
+    padding-top: 2.5vw;
+    padding-bottom: 1em;
 }
 
 li {
@@ -236,15 +187,15 @@ li {
 }
 
 #list1 {
-    grid-row: 2/7;
+    grid-row: 1/2;
     grid-column: 1/2;
-    padding-left: 1.5em;
+    padding-left: 5vw;
     
  }
 
  #list2 {
     grid-column: 2/3;
-    grid-row: 2/7;
+    grid-row: 1/2;
  }
 
  /* This is the footer. */
@@ -274,168 +225,28 @@ footer img:hover {
     transform: scale(1.2);
 }
 
-/*This is the style for the experience page*/
-/*This is the hero box.*/
-#hero {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;  
-    position: fixed;
-    top: 8%;
-    width: 100%;
-   z-index: 888;
-
-}
-
-#hero-box {
-    grid-column: 1/4;
-    grid-row: 1/3;
-    
-}
-
-#hero-img {
-    width: 100%;
-}
-
-#hero-msg {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    z-index: 0;
-}
-
-#hero-msg h1 {
-    margin-top: 10%;
-    font-size: 3em;
-}
-
-/*This is the sidebar for the timeline*/
-.sidebar {
-    width: 600px;
-    float: right;
-    background-color: #eae5e1;
-    padding-top: 20px;
-    margin-top: 26%;
-    margin-bottom: 3%;
-    margin-right: 2%;
-    
-}
-
-/*This is the actual timeline (the vertical ruler)*/
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 2px;
-    left: 40%;
-    margin-left: -3px;
-    
-}
-
-/* Container around content */
-.container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 40%;
-}
-
-/* The circles on the timeline */
-.container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #f6a05e;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  /* Place the container to the left */
-.left {
-    left: 0;
-  }
-  
-  /* Place the container to the right */
-  .right {
-    left: 40%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-
-  /* Add arrows to the right container (pointing left) */
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .right::after {
-    left: -16px;
-  }
-
- /* The actual content */
-.content {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
-    border-radius: 6px;
-  } 
-
-  /*This is the focus area.*/
-
- 
-
-  #focus {
-    width: 800px;
-    float: left;
-    background-color: #eae5e1;
-    margin-top: 26%;
-    margin-left: 10%;
-    border:1px solid black;
-    border-radius: 40px;
-    padding: 20px;
-}
 
 /*This is the style for the projects page*/
+.project-img {
+    opacity: 70%;
+}
 
-#projects img {
+#project-container {
+    padding-bottom: 10vh;
+}
+#project img {
     width: 600px;
-    margin-top: 10%;
+    margin-top: 4%;
     border:8px solid #b1ae89;
 }
 
-#projects p {
+#project p {
     width: 525px;
     margin-left: 34.7%;
+}
+
+/*This is the style for the education page*/
+#under-construction img{
+    width: 20%;
+    padding: 2vh;
 }
